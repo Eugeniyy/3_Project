@@ -3,7 +3,7 @@ import time
 
 link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
 
-def test_items(browser):
+def test_button_add_to_basket(browser):
     print("\nrun test...")
     browser.get(link)
     time.sleep(3)

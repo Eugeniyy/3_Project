@@ -1,4 +1,4 @@
-#base_page
+#base_page - базовые классы и методы
 
 class BasePage():
     
@@ -8,3 +8,5 @@ class BasePage():
 
     def open(self):
         self.browser.get(self.url)
+
+#Пустая строка!

@@ -21,3 +21,5 @@ class ProductPageLocators():
     
     ADD_PRODUCT_LINK = (By.CSS_SELECTOR, ".btn-add-to-basket")
     BASKET_LINK = (By.CSS_SELECTOR, ".btn-group > a.btn.btn-default")
+
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, ".alert-success")

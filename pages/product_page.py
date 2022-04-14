@@ -39,3 +39,9 @@ class ProductPage(BasePage):
     def check_price_product(self):
         self.basket_price_product = str(self.browser.find_element(*ProductPageLocators.BASKET_PRICE_PRODUCT_TXT).text)
         assert self.basket_price_product == self.price_product, f'basket_product="{self.basket_price_product}" not equal product="{self.price_product}"'
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), "Success message is presented"
+
+    def should_dissapear_success_message(self):
+        assert self.is_dissapeared(*ProductPageLocators.SUCCESS_MESSAGE), "Success message didn't disappear"

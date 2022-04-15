@@ -6,8 +6,6 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoAlertPresentException
 from selenium.common.exceptions import NoSuchElementException
 import math
-import time
-
 class ProductPage(BasePage):
     def get_product_info(self):
         self.product = str(self.browser.find_element(*ProductPageLocators.PRODUCT_TXT).text)
@@ -32,7 +30,6 @@ class ProductPage(BasePage):
             print("No second alert presented")
 
     def check_product(self):
-        time.sleep(2)
         self.basket_product = str(self.browser.find_element(*ProductPageLocators.BASKET_PRODUCT_TXT).text)
         assert self.basket_product == self.product, f'basket_product="{self.basket_product}" not equal product="{self.product}"'
     

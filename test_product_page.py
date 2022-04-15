@@ -47,3 +47,11 @@ def test_message_disappeared_after_adding_product_to_basket(browser):
     page.add_product_to_basket()
     page.should_dissapear_success_message()
 
+def test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
+    link = "https://selenium1py.pythonanywhere.com/"
+    page = ProductPage(browser, link)
+    page.open()
+    page.go_to_basket()
+    page.should_be_basket_empty()
+    page.should_be_message_basket_empty()
+

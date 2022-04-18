@@ -1,5 +1,6 @@
 #test_product_page.py - тестируем страницу с продуктом
 
+from pages.basket_page import BasketPage
 from pages.product_page import ProductPage
 import pytest
 import time
@@ -49,7 +50,7 @@ def test_message_disappeared_after_adding_product_to_basket(browser):
 
 def test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
     link = "https://selenium1py.pythonanywhere.com/"
-    page = ProductPage(browser, link)
+    page = BasketPage(browser, link)
     page.open()
     page.go_to_basket()
     page.should_be_basket_empty()

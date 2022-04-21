@@ -32,6 +32,7 @@ class TestLoginFromProductPage():
         self.page.open()
         self.page.go_to_login_page()
 
+    @pytest.mark.xfail 
     def test_guest_cant_see_success_message_after_adding_product_to_basket(self, browser):
         link = "http://selenium1py.pythonanywhere.com/ru/catalogue/coders-at-work_207/"
         self.page = ProductPage(browser, link)
@@ -45,6 +46,7 @@ class TestLoginFromProductPage():
         self.page.open()
         self.page.should_not_be_success_message()
 
+    @pytest.mark.xfail 
     def test_message_disappeared_after_adding_product_to_basket(self, browser):
         link = "http://selenium1py.pythonanywhere.com/ru/catalogue/coders-at-work_207/"
         self.page = ProductPage(browser, link)

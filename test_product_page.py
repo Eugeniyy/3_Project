@@ -26,7 +26,7 @@ class TestLoginFromProductPage():
         self.page.open()
         self.page.should_be_login_link()
 
-    def test_guest_can_go_to_login_page__from_product_page(self, browser):
+    def test_guest_can_go_to_login_page_from_product_page(self, browser):
         link = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/the-city-and-the-stars_95/"
         self.page = ProductPage(browser, link)
         self.page.open()

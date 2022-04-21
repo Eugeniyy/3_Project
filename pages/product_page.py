@@ -2,9 +2,7 @@
 
 from .base_page import BasePage
 from .locators import ProductPageLocators
-from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoAlertPresentException
-from selenium.common.exceptions import NoSuchElementException
 import math
 class ProductPage(BasePage):
     def get_product_info(self):

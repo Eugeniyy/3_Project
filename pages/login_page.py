@@ -1,6 +1,5 @@
 #login_page.py - модуль со страницей логина
 
-import email
 from .base_page import BasePage
 from .locators import LoginPageLocators
 
